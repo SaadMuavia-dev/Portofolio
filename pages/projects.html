@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Projects — Saad Muavia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+   <link rel="stylesheet" href="../css/projects.css">
+</head>
+<body>
+
+<div class="blob-wrap">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="mainNav">
+  <div class="container-fluid">
+    <a href="#" class="nav-logo">
+      <svg viewBox="0 0 180 44" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3ec9d6"/><stop offset="50%" stop-color="#5db89a"/><stop offset="100%" stop-color="#8b7fb8"/>
+          </linearGradient>
+          <linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#3ec9d6"/><stop offset="100%" stop-color="#5db89a"/>
+          </linearGradient>
+        </defs>
+        <rect x="1" y="1" width="40" height="40" rx="10" fill="url(#lg1)"/>
+        <text x="21" y="28" text-anchor="middle" font-family="'Syne',sans-serif" font-weight="800" font-size="17" fill="#fff" letter-spacing="-1">&lt;/&gt;</text>
+        <text x="50" y="20" font-family="'Syne',sans-serif" font-weight="800" font-size="15" fill="url(#lg2)" letter-spacing=".5">SAAD</text>
+        <text x="50" y="37" font-family="'Syne',sans-serif" font-weight="400" font-size="12" fill="#6a92ad" letter-spacing="3">CODER</text>
+      </svg>
+    </a>
+    <ul class="nav-links" id="mobileMenu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#" class="active">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="d-flex align-items-center gap-2">
+      <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">☀️ Light</button>
+      <button class="navbar-toggler-custom" onclick="toggleMenu()">☰</button>
+    </div>
+  </div>
+</nav>
+
+<main class="page-content">
+
+  <!-- ── Hero Banner ── -->
+  <section style="padding:80px 0 60px;background:var(--bg2);border-bottom:1px solid var(--border);">
+    <div class="container text-center">
+      <div class="reveal">
+        <span class="section-tag">MY WORK</span>
+        <h1 class="section-title">Featured <span class="grad-text">Projects</span></h1>
+        <div class="title-line mx-auto"></div>
+        <p style="color:var(--muted);max-width:520px;margin:20px auto 0;font-size:15px;line-height:1.8;">
+          Real projects built with real code — spanning full-stack applications, interactive frontends, and backend APIs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Stats Strip ── -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="row text-center g-4 reveal">
+        <div class="col-6 col-md-3">
+          <div class="stat-number counter" data-to="15" data-suffix="+">0+</div>
+          <div style="font-family:var(--font-display);font-size:12px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;">Projects Built</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-number counter" data-to="8" data-suffix="+">0+</div>
+          <div style="font-family:var(--font-display);font-size:12px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;">Clients Served</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-number counter" data-to="3" data-suffix="yr">0yr</div>
+          <div style="font-family:var(--font-display);font-size:12px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;">Experience</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-number counter" data-to="99" data-suffix="%">0%</div>
+          <div style="font-family:var(--font-display);font-size:12px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Featured Project ── -->
+  <section class="section-wrap" style="padding-bottom:0;">
+    <div class="container">
+      <div class="reveal">
+        <div class="featured-card">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <span class="featured-badge">⭐ Featured Project</span>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="pulse-dot"></span>
+                <span style="font-family:var(--font-display);font-size:11px;color:var(--accent);font-weight:700;letter-spacing:1px;">LIVE PROJECT</span>
+              </div>
+              <h2 style="font-size:clamp(24px,3vw,38px);font-weight:800;margin-bottom:14px;">
+                E-Commerce <span class="grad-text">Platform</span>
+              </h2>
+              <p style="color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:20px;">
+                A full-stack online shop with product listings, cart management, real-time inventory, user authentication, Stripe payment integration, and an admin dashboard for order tracking.
+              </p>
+              <div class="d-flex flex-wrap gap-2 mb-24" style="margin-bottom:24px;">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Stripe API</span>
+                <span class="tech-tag">Redux</span>
+                <span class="tech-tag">JWT Auth</span>
+              </div>
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="btn-grad">Live Demo →</a>
+                <a href="#" class="btn-outline-sc">GitHub</a>
+              </div>
+            </div>
+            <div class="col-lg-5 text-center">
+              <div style="font-size:96px;line-height:1;filter:drop-shadow(0 10px 30px rgba(62,201,214,.3));">🛒</div>
+              <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">
+                <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 18px;text-align:center;">
+                  <div style="font-family:var(--font-display);font-weight:800;font-size:20px;color:var(--accent);">2.4k</div>
+                  <div style="font-size:11px;color:var(--muted);font-family:var(--font-display);">Users</div>
+                </div>
+                <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 18px;text-align:center;">
+                  <div style="font-family:var(--font-display);font-weight:800;font-size:20px;color:var(--accent2);">98ms</div>
+                  <div style="font-size:11px;color:var(--muted);font-family:var(--font-display);">Avg Load</div>
+                </div>
+                <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 18px;text-align:center;">
+                  <div style="font-family:var(--font-display);font-weight:800;font-size:20px;color:var(--accent3);">A+</div>
+                  <div style="font-size:11px;color:var(--muted);font-family:var(--font-display);">Lighthouse</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Filters ── -->
+  <section style="padding:48px 0 0;">
+    <div class="container text-center reveal">
+      <div class="d-flex justify-content-center gap-2 flex-wrap" id="filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects Grid ── -->
+  <section class="section-wrap">
+    <div class="container">
+      <div class="row g-4" id="projectsGrid">
+
+        <!-- 1 — Task Manager -->
+        <div class="col-md-6 col-lg-4 project-card" data-cat="fullstack"
+          data-title="Task Manager App"
+          data-desc="Kanban board with real-time drag-and-drop, user auth, priority tags, team collaboration, and activity history. Uses WebSockets for live updates."
+          data-emoji="📋"
+          data-color="linear-gradient(135deg,rgba(139,127,184,.22),rgba(139,127,184,.06))"
+          data-tags="React,Express,Socket.io,MongoDB,JWT"
+          data-cat-label="Full Stack"
+          data-highlight="#3ec9d6">
+          <div class="sc-card h-100 overflow-hidden" onclick="openModal(this.parentElement)">
+            <div class="project-preview" style="background:linear-gradient(135deg,rgba(139,127,184,.18),rgba(139,127,184,.06));">
+              <div class="grid-dots"></div>
+              <span class="emoji">📋</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 style="font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--text);margin:0;">Task Manager App</h5>
+                <span class="sc-tag" style="background:rgba(62,201,214,.12);color:var(--accent);">Full Stack</span>
+              </div>
+              <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;">Kanban board with real-time drag-and-drop, user auth, priority tags and team collaboration.</p>
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">Socket.io</span>
+              </div>
+              <a href="#" class="btn-outline-sc" style="font-size:13px;padding:8px 20px;" onclick="event.stopPropagation()">View Project →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 — Portfolio CMS -->
+        <div class="col-md-6 col-lg-4 project-card" data-cat="frontend"
+          data-title="Portfolio CMS"
+          data-desc="Headless CMS-driven developer portfolio with dark/light mode toggle, smooth scroll animations, dynamic project pages and SEO meta tags."
+          data-emoji="🖼️"
+          data-color="linear-gradient(135deg,rgba(93,184,154,.22),rgba(93,184,154,.06))"
+          data-tags="React,Sanity CMS,Next.js,Framer Motion,TailwindCSS"
+          data-cat-label="Frontend"
+          data-highlight="#5db89a">
+          <div class="sc-card h-100 overflow-hidden" onclick="openModal(this.parentElement)">
+            <div class="project-preview" style="background:linear-gradient(135deg,rgba(93,184,154,.18),rgba(93,184,154,.06));">
+              <div class="grid-dots"></div>
+              <span class="emoji">🖼️</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 style="font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--text);margin:0;">Portfolio CMS</h5>
+                <span class="sc-tag" style="background:rgba(93,184,154,.12);color:var(--accent2);">Frontend</span>
+              </div>
+              <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;">Headless CMS-driven developer portfolio with dark/light mode toggle, smooth animations and SEO meta.</p>
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Sanity CMS</span>
+                <span class="tech-tag">Next.js</span>
+              </div>
+              <a href="#" class="btn-outline-sc" style="font-size:13px;padding:8px 20px;" onclick="event.stopPropagation()">View Project →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 — Blog Platform -->
+        <div class="col-md-6 col-lg-4 project-card" data-cat="fullstack"
+          data-title="Blog Platform"
+          data-desc="SEO-optimised multi-user blog with a rich markdown editor, comment system, category filters, tag search, and a full-featured admin dashboard with analytics."
+          data-emoji="✍️"
+          data-color="linear-gradient(135deg,rgba(176,159,127,.22),rgba(176,159,127,.06))"
+          data-tags="Next.js,MongoDB,NextAuth,MDX,TailwindCSS"
+          data-cat-label="Full Stack"
+          data-highlight="#3ec9d6">
+          <div class="sc-card h-100 overflow-hidden" onclick="openModal(this.parentElement)">
+            <div class="project-preview" style="background:linear-gradient(135deg,rgba(176,159,127,.18),rgba(176,159,127,.06));">
+              <div class="grid-dots"></div>
+              <span class="emoji">✍️</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 style="font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--text);margin:0;">Blog Platform</h5>
+                <span class="sc-tag" style="background:rgba(62,201,214,.12);color:var(--accent);">Full Stack</span>
+              </div>
+              <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;">SEO-optimised blog with markdown editor, comment system, category filters and admin dashboard.</p>
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">NextAuth</span>
+              </div>
+              <a href="#" class="btn-outline-sc" style="font-size:13px;padding:8px 20px;" onclick="event.stopPropagation()">View Project →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 — Weather Dashboard -->
+        <div class="col-md-6 col-lg-4 project-card" data-cat="frontend"
+          data-title="Weather Dashboard"
+          data-desc="Real-time weather app with animated sky backgrounds that change based on conditions, a 7-day forecast chart, city autocomplete search, and °C/°F toggle."
+          data-emoji="🌤️"
+          data-color="linear-gradient(135deg,rgba(122,155,191,.22),rgba(122,155,191,.06))"
+          data-tags="React,OpenWeather API,Chart.js,CSS Animations,Geolocation API"
+          data-cat-label="Frontend"
+          data-highlight="#5db89a">
+          <div class="sc-card h-100 overflow-hidden" onclick="openModal(this.parentElement)">
+            <div class="project-preview" style="background:linear-gradient(135deg,rgba(122,155,191,.18),rgba(122,155,191,.06));">
+              <div class="grid-dots"></div>
+              <span class="emoji">🌤️</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 style="font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--text);margin:0;">Weather Dashboard</h5>
+                <span class="sc-tag" style="background:rgba(93,184,154,.12);color:var(--accent2);">Frontend</span>
+              </div>
+              <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;">Real-time weather with animated sky backgrounds, 7-day forecast, city search and unit toggle.</p>
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">OpenWeather API</span>
+                <span class="tech-tag">Chart.js</span>
+              </div>
+              <a href="#" class="btn-outline-sc" style="font-size:13px;padding:8px 20px;" onclick="event.stopPropagation()">View Project →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 — Restaurant Website -->
+        <div class="col-md-6 col-lg-4 project-card" data-cat="frontend"
+          data-title="Restaurant Website"
+          data-desc="Pixel-perfect restaurant site with an animated menu reveal, table booking form, lightbox photo gallery, Google Maps embed, and WhatsApp order CTA."
+          data-emoji="🍽️"
+          data-color="linear-gradient(135deg,rgba(168,149,110,.22),rgba(168,149,110,.06))"
+          data-tags="HTML5,CSS3,Vanilla JS,GSAP,Google Maps API"
+          data-cat-label="Frontend"
+          data-highlight="#5db89a">
+          <div class="sc-card h-100 overflow-hidden" onclick="openModal(this.parentElement)">
+            <div class="project-preview" style="background:linear-gradient(135deg,rgba(168,149,110,.18),rgba(168,149,110,.06));">
+              <div class="grid-dots"></div>
+              <span class="emoji">🍽️</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 style="font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--text);margin:0;">Restaurant Website</h5>
+                <span class="sc-tag" style="background:rgba(93,184,154,.12);color:var(--accent2);">Frontend</span>
+              </div>
+              <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;">Animated menu, table booking form, gallery, Google Maps integration and WhatsApp CTA.</p>
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">GSAP</span>
+              </div>
+              <a href="#" class="btn-outline-sc" style="font-size:13px;padding:8px 20px;" onclick="event.stopPropagation()">View Project →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 — REST API -->
+        <div class="col-md-6 col-lg-4 project-card" data-cat="backend"
+          data-title="REST API Service"
+          data-desc="Production-ready RESTful API with full CRUD, rate limiting, JWT-based auth, role-based access control, Swagger documentation, and automated tests."
+          data-emoji="⚙️"
+          data-color="linear-gradient(135deg,rgba(62,201,214,.22),rgba(62,201,214,.06))"
+          data-tags="Node.js,Express,PostgreSQL,Swagger,Jest,Docker"
+          data-cat-label="Backend"
+          data-highlight="#8b7fb8">
+          <div class="sc-card h-100 overflow-hidden" onclick="openModal(this.parentElement)">
+            <div class="project-preview" style="background:linear-gradient(135deg,rgba(62,201,214,.18),rgba(62,201,214,.06));">
+              <div class="grid-dots"></div>
+              <span class="emoji">⚙️</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 style="font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--text);margin:0;">REST API Service</h5>
+                <span class="sc-tag" style="background:rgba(139,127,184,.12);color:var(--accent3);">Backend</span>
+              </div>
+              <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;">Production-ready REST API with JWT auth, rate limiting, Swagger docs and full test coverage.</p>
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Docker</span>
+              </div>
+              <a href="#" class="btn-outline-sc" style="font-size:13px;padding:8px 20px;" onclick="event.stopPropagation()">View Project →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 — Chat App -->
+        <div class="col-md-6 col-lg-4 project-card" data-cat="fullstack"
+          data-title="Real-Time Chat App"
+          data-desc="Multi-room chat application with typing indicators, read receipts, file sharing, emoji reactions, and end-to-end encrypted messages."
+          data-emoji="💬"
+          data-color="linear-gradient(135deg,rgba(93,184,154,.22),rgba(93,184,154,.06))"
+          data-tags="React,Node.js,Socket.io,Redis,MongoDB"
+          data-cat-label="Full Stack"
+          data-highlight="#3ec9d6">
+          <div class="sc-card h-100 overflow-hidden" onclick="openModal(this.parentElement)">
+            <div class="project-preview" style="background:linear-gradient(135deg,rgba(93,184,154,.18),rgba(93,184,154,.06));">
+              <div class="grid-dots"></div>
+              <span class="emoji">💬</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 style="font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--text);margin:0;">Real-Time Chat App</h5>
+                <span class="sc-tag" style="background:rgba(62,201,214,.12);color:var(--accent);">Full Stack</span>
+              </div>
+              <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;">Multi-room chat with typing indicators, read receipts, file sharing and emoji reactions.</p>
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Socket.io</span>
+                <span class="tech-tag">Redis</span>
+              </div>
+              <a href="#" class="btn-outline-sc" style="font-size:13px;padding:8px 20px;" onclick="event.stopPropagation()">View Project →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 — Expense Tracker -->
+        <div class="col-md-6 col-lg-4 project-card" data-cat="fullstack"
+          data-title="Expense Tracker"
+          data-desc="Personal finance app with budgeting tools, categorised transactions, monthly charts, CSV export, and recurring expense reminders sent via email."
+          data-emoji="💰"
+          data-color="linear-gradient(135deg,rgba(139,127,184,.22),rgba(139,127,184,.06))"
+          data-tags="React,Node.js,PostgreSQL,Chart.js,Nodemailer"
+          data-cat-label="Full Stack"
+          data-highlight="#8b7fb8">
+          <div class="sc-card h-100 overflow-hidden" onclick="openModal(this.parentElement)">
+            <div class="project-preview" style="background:linear-gradient(135deg,rgba(139,127,184,.18),rgba(139,127,184,.06));">
+              <div class="grid-dots"></div>
+              <span class="emoji">💰</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 style="font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--text);margin:0;">Expense Tracker</h5>
+                <span class="sc-tag" style="background:rgba(62,201,214,.12);color:var(--accent);">Full Stack</span>
+              </div>
+              <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;">Personal finance app with budgeting, categorised transactions, charts and CSV export.</p>
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Chart.js</span>
+              </div>
+              <a href="#" class="btn-outline-sc" style="font-size:13px;padding:8px 20px;" onclick="event.stopPropagation()">View Project →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 — Landing Page Builder -->
+        <div class="col-md-6 col-lg-4 project-card" data-cat="frontend"
+          data-title="Landing Page Builder"
+          data-desc="Drag-and-drop landing page builder with reusable section blocks, live preview, one-click export to clean HTML/CSS, and a component library."
+          data-emoji="🧩"
+          data-color="linear-gradient(135deg,rgba(62,201,214,.22),rgba(62,201,214,.06))"
+          data-tags="React,DnD Kit,CSS Variables,LocalStorage,HTML Export"
+          data-cat-label="Frontend"
+          data-highlight="#5db89a">
+          <div class="sc-card h-100 overflow-hidden" onclick="openModal(this.parentElement)">
+            <div class="project-preview" style="background:linear-gradient(135deg,rgba(62,201,214,.18),rgba(62,201,214,.06));">
+              <div class="grid-dots"></div>
+              <span class="emoji">🧩</span>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 style="font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--text);margin:0;">Landing Page Builder</h5>
+                <span class="sc-tag" style="background:rgba(93,184,154,.12);color:var(--accent2);">Frontend</span>
+              </div>
+              <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;">Drag-and-drop builder with reusable section blocks, live preview and one-click HTML export.</p>
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">DnD Kit</span>
+                <span class="tech-tag">CSS Variables</span>
+              </div>
+              <a href="#" class="btn-outline-sc" style="font-size:13px;padding:8px 20px;" onclick="event.stopPropagation()">View Project →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Empty state -->
+      <div id="emptyState" style="display:none;text-align:center;padding:60px 0;">
+        <div style="font-size:48px;margin-bottom:16px;">🔍</div>
+        <p style="color:var(--muted);font-family:var(--font-display);">No projects in this category yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section style="padding:80px 0;background:var(--bg2);border-top:1px solid var(--border);">
+    <div class="container text-center reveal">
+      <span class="section-tag">LET'S WORK TOGETHER</span>
+      <h2 class="section-title">Have a <span class="grad-text">Project in Mind?</span></h2>
+      <div class="title-line mx-auto" style="margin-bottom:24px;"></div>
+      <p style="color:var(--muted);max-width:480px;margin:0 auto 32px;font-size:15px;">
+        I'm open to freelance work and exciting new opportunities. Let's build something great together.
+      </p>
+      <a href="#" class="btn-grad" style="font-size:15px;padding:14px 36px;">Get In Touch →</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <div style="font-family:var(--font-display);font-weight:800;font-size:20px;" class="mb-2">
+      <span class="grad-text">Saad Muavia</span>
+    </div>
+    <p style="font-size:13px;color:var(--muted);">Full Stack Web Developer · Lodhran, Pakistan</p>
+    <div class="d-flex justify-content-center gap-3 mt-3">
+      <a href="#" style="color:var(--muted);font-size:13px;font-family:var(--font-display);">GitHub</a>
+      <a href="#" style="color:var(--muted);font-size:13px;font-family:var(--font-display);">LinkedIn</a>
+      <a href="#" style="color:var(--muted);font-size:13px;font-family:var(--font-display);">Twitter</a>
+    </div>
+    <p style="font-size:11px;color:var(--border);margin-top:16px;">© 2026 Saad Muavia. Crafted with ❤️</p>
+  </div>
+</footer>
+
+<!-- ── Detail Modal ── -->
+<div class="modal-backdrop-custom" id="detailModal" onclick="closeModalOutside(event)">
+  <div class="modal-box" id="modalBox">
+    <div class="modal-header-custom">
+      <div>
+        <span id="mCatTag" class="sc-tag" style="background:rgba(62,201,214,.12);color:var(--accent);margin-bottom:12px;display:inline-block;"></span>
+        <h3 id="mTitle" style="font-size:24px;font-weight:800;color:var(--text);"></h3>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body-custom">
+      <div class="modal-preview" id="mPreview">
+        <div class="grid-dots" style="position:absolute;inset:0;background-image:radial-gradient(var(--border) 1px,transparent 1px);background-size:20px 20px;border-radius:14px;"></div>
+        <span id="mEmoji" style="position:relative;z-index:1;font-size:72px;filter:drop-shadow(0 4px 16px rgba(0,0,0,.3));"></span>
+      </div>
+      <p id="mDesc" style="color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:20px;"></p>
+      <div style="margin-bottom:24px;">
+        <div style="font-family:var(--font-display);font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">Tech Stack</div>
+        <div id="mTags" class="d-flex flex-wrap gap-2"></div>
+      </div>
+      <div class="d-flex gap-3">
+        <a href="#" class="btn-grad" style="font-size:14px;padding:10px 24px;">Live Demo →</a>
+        <a href="#" class="btn-outline-sc" style="font-size:14px;padding:10px 24px;">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  /* ── Theme ── */
+  (function(){
+    const saved = localStorage.getItem('sc-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+    updateThemeBtn(saved);
+  })();
+  window.toggleTheme = function(){
+    const cur = document.documentElement.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('sc-theme', next);
+    updateThemeBtn(next);
+  };
+  function updateThemeBtn(t){
+    const btn = document.getElementById('themeBtn');
+    if(btn) btn.innerHTML = t === 'dark' ? '☀️ Light' : '🌙 Dark';
+  }
+
+  /* ── Mobile nav ── */
+  window.toggleMenu = function(){
+    const nav = document.getElementById('mobileMenu');
+    if(nav) nav.classList.toggle('open');
+  };
+
+  /* ── Scroll reveal ── */
+  function initReveal(){
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const delay = e.target.dataset.delay || 0;
+          setTimeout(()=>e.target.classList.add('visible'), delay*1000);
+          obs.unobserve(e.target);
+        }
+      });
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  }
+
+  /* ── Counters ── */
+  function initCounters(){
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const target = +e.target.dataset.to;
+          const suffix = e.target.dataset.suffix || '';
+          let start = 0;
+          const step = target / 70;
+          const id = setInterval(()=>{
+            start += step;
+            if(start >= target){ e.target.textContent = target+suffix; clearInterval(id); }
+            else e.target.textContent = Math.floor(start)+suffix;
+          },18);
+          obs.unobserve(e.target);
+        }
+      });
+    },{threshold:0.4});
+    document.querySelectorAll('.counter').forEach(el=>obs.observe(el));
+  }
+
+  /* ── Nav scroll ── */
+  function initNavScroll(){
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll',()=>{
+      nav.style.boxShadow = window.scrollY>30 ? '0 4px 30px rgba(0,0,0,.18)' : 'none';
+    });
+  }
+
+  /* ── Filter ── */
+  document.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+      const f = this.dataset.filter;
+      let visible = 0;
+      document.querySelectorAll('.project-card').forEach(card=>{
+        if(f==='all' || card.dataset.cat===f){
+          card.classList.remove('hidden');
+          card.style.animation='none';
+          void card.offsetWidth;
+          card.style.animation='';
+          visible++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+      document.getElementById('emptyState').style.display = visible===0 ? 'block' : 'none';
+    });
+  });
+
+  /* ── Modal ── */
+  window.openModal = function(card){
+    const modal = document.getElementById('detailModal');
+    document.getElementById('mTitle').textContent = card.dataset.title;
+    document.getElementById('mDesc').textContent = card.dataset.desc;
+    document.getElementById('mEmoji').textContent = card.dataset.emoji;
+    document.getElementById('mPreview').style.background = card.dataset.color;
+    document.getElementById('mCatTag').textContent = card.dataset.catLabel;
+
+    const tagsEl = document.getElementById('mTags');
+    tagsEl.innerHTML = '';
+    card.dataset.tags.split(',').forEach(t=>{
+      const s = document.createElement('span');
+      s.className = 'tech-tag';
+      s.textContent = t.trim();
+      tagsEl.appendChild(s);
+    });
+
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  window.closeModal = function(){
+    document.getElementById('detailModal').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+  window.closeModalOutside = function(e){
+    if(e.target === document.getElementById('detailModal')) closeModal();
+  };
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+
+  /* ── Init ── */
+  document.addEventListener('DOMContentLoaded',()=>{
+    initReveal();
+    initCounters();
+    initNavScroll();
+  });
+</script>
+</body>
+</html>

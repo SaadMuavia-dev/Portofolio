@@ -1,863 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Saad Muavia — Full Stack Developer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='10' fill='%233ec9d6'/><text x='20' y='27' text-anchor='middle' font-size='18' font-family='monospace' fill='white'>S</text></svg>"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
+<body>
 
-<body class="index-page">
+<!-- Blobs -->
+<div class="blob-wrap">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
 
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="./assets/img/my.jpeg" alt="my picture" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Saad Muavia</h1>
+<!-- NAVBAR -->
+<nav id="mainNav">
+  <div class="container-fluid">
+    <a href="index.html" class="nav-logo" aria-label="Saad Coder">
+      <svg viewBox="0 0 180 44" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3ec9d6"/><stop offset="50%" stop-color="#5db89a"/><stop offset="100%" stop-color="#8b7fb8"/>
+          </linearGradient>
+          <linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#3ec9d6"/><stop offset="100%" stop-color="#5db89a"/>
+          </linearGradient>
+        </defs>
+        <rect x="1" y="1" width="40" height="40" rx="10" fill="url(#lg1)"/>
+        <text x="21" y="28" text-anchor="middle" font-family="'Syne',sans-serif" font-weight="800" font-size="17" fill="#fff" letter-spacing="-1">&lt;/&gt;</text>
+        <text x="50" y="20" font-family="'Syne',sans-serif" font-weight="800" font-size="15" fill="url(#lg2)" letter-spacing=".5">SAAD</text>
+        <text x="50" y="37" font-family="'Syne',sans-serif" font-weight="400" font-size="12" fill="#6a92ad" letter-spacing="3">CODER</text>
+      </svg>
     </a>
-
-    <div class="social-links text-center">
-      <a href=" https://www.linkedin.com/in/saad-muavia-38a133387?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
-        class="linkdin" target="_blank"><i class="bi-linkedin"></i></a>
-      <a href="https://www.facebook.com/share/1BPF22Lw5e/" class="facebook" target="_blank"><i
-          class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/saadm_uavia?igsh=MXBhYmlpYTUxdXg1cg==" class="instagram" target="_blank"><i
-          class="bi bi-instagram"></i></a>
-
-      <a href="https://github.com/saadmuavia-dev" class="github" target="_blank"><i class="bi bi-github"></i></a>
-      <a href="https://wa.me/923036675660" class="linkedin" target="_blank"><i class="bi bi-whatsapp"></i></a>
+    <ul class="nav-links" id="mobileMenu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="pages/about.html">About</a></li>
+      <li><a href="pages/services.html">Services</a></li>
+      <li><a href="pages/projects.html">Projects</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+    </ul>
+    <div class="d-flex align-items-center gap-2">
+      <button class="theme-btn" onclick="toggleTheme()">🌙 Dark</button>
+      <button class="navbar-toggler-custom" onclick="toggleMenu()">☰</button>
     </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-        
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-      </ul>
-    </nav>
-
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/my.jpeg" alt="" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Saad Muavia</h2>
-        <p>I'm <span class="typed" data-typed-items="Designer, Full-Stack Developer, Freelancer, ">Full-Stack Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>I’m a FullStack Developer passionate about crafting clean, responsive, and user-friendly web interfaces. With
-          a strong focus on HTML, CSS, JavaScript, and modern frameworks, I love turning ideas into interactive
-          experiences that not only look good but also work seamlessly across devices.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/my.jpeg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>FullStack Developer.</h2>
-            <p class="fst-italic py-3">
-              I enjoy solving problems through code, building layouts that bring designs to life, and continuously
-              learning the latest trends in web technologies. My goal is to create websites and applications that
-              combine performance, accessibility, and aesthetics—ensuring a smooth experience for every user.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>15 May 2007</span></li>
-
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+92 346 2705953</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>lodhran pakistan</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>18</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Assocaiate Degree(ADP)</span>
-                  </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>saadmuavia36203@gmail.com</span>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p><strong>Happy Clients</strong> <span></span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p><strong>Projects</strong> <span></span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p><strong>Hours Of Support</strong> <span></span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p><strong>Hard Workers</strong> <span></span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p> Proficient in HTML5, CSS3, and JavaScript (ES6+), creating clean, semantic, and maintainable code.
-
-
-
-          Expertise in mobile-first and cross-browser compatible layouts, ensuring seamless user
-          experiences across all devices.
-
-          UI/UX Implementation: Ability to transform design mockups (Figma/Adobe XD/Sketch) into pixel-perfect,
-          functional interfaces.
-
-
-        </p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>knowledge of website performance optimization and SEO best practices.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Saad Muavia</h4>
-              <p><em>I am a passionate developer who believes that every line of code can create an impact. For me,
-                  challenges are opportunities to grow, and I approach every project with dedication, creativity, and a
-                  problem-solving mindset. I am driven by the idea of turning complex problems into simple, effective
-                  solutions. My goal is not just to build applications but to create experiences that inspire, engage,
-                  and deliver real value.</em></p>
-              <ul>
-                <li>Lodhran, Punjab Pakistan</li>
-                <li>(+92)346 2705953</li>
-                <li>saadmuavia36203@gmail.com</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Inter With Computer Science (ICS)</h4>
-              <h5>2023- 2025</h5>
-              <p><em>The Oxford COllege Lodhran</em></p>
-              <p>I have completed my Intermediate in Computer Science (ICS) and have developed a strong foundation in
-                programming and computer systems. During my ICS studies, I discovered my passion for web development and
-                decided to pursue it further.</p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Assocaiate Degree Program With (Information Technology)</h4>
-              <h5>2025 - On Going</h5>
-              <p><em>Tareen Institute Of Computer Education And Resources (TICER)</em></p>
-              <p>Currently, I am enrolled in the Associate in Data Processing (ADP) program, where I am enhancing my
-                skills in web development and exploring other aspects of data processing. Through ADP, I aim to gain
-                hands-on experience and in-depth knowledge of web development technologies, preparing myself for a
-                successful career in the field</p>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Full-Stack Developer</h4>
-              <h5>2025 - Present</h5>
-              <p><em>Tareen Institute Of Computer Education And Resources (TICER) </em></p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production
-                  communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the
-                  project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the
-                  design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Microsoft specialist</h4>
-              <h5>2023 - Present</h5>
-              <p><em>Tareen Institute Of Computer Education And Resources (TICER)</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and
-                  advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item">
-              <h4>Photoshop specialist</h4>
-              <h5>2023 - Present</h5>
-              <p><em>Tareen Institute Of Computer Education And Resources (TICER)</em></p>
-
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Resume Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>I’m Saad Muavia — FullStack Developer.
-          I create clean, responsive, and user-friendly websites. My focus is on turning creative ideas into functional
-          digital experiences using modern web technologies.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/IMG-20250915-WA0002.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Site 1</h4>
-                  <p>About a Online shopping.</p>
-                  <a href=" https://github.com/saadmuavia-dev" title="See All"
-                    data-gallery="https://github.com/saadmuavia-dev" class=" preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href=" https://saadmuavia-dev.github.io/Electro-Bootstrap-1.0.0/" target="_blank" title="Go to page"
-                    class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/IMG-20250915-WA0003.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Site 2</h4>
-                  <p>A website templte.</p>
-                  <a href="https://github.com/saadmuavia-dev" title="See All"
-                    data-gallery="https://github.com/saadmuavia-dev" class=" preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="https://saadmuavia-dev.github.io/mainfolder/" target="_blank" title="Go to page"
-                    class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/IMG-20250915-WA0004.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Site 3</h4>
-                  <p>A gymn site</p>
-                  <a href="https://github.com/saadmuavia-dev" title="See All"
-                    data-gallery="https://github.com/saadmuavia-dev" class="preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="https://saadmuavia-dev.github.io/FitZone-fitness/" target="_blank" title="Go to page"
-                    class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/IMG-20250915-WA0005.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Site 4</h4>
-                  <p>A bussiness growing company web template.</p>
-                  <a href="https://github.com/saadmuavia-dev" title="See All"
-                    data-gallery="https://github.com/saadmuavia-dev" class=" preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="https://saadmuavia-dev.github.io/BizBloom/
-" target="_blank" title="Go to page" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/IMG-20250915-WA0006.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>site 6</h4>
-                  <p>I lamding a website creatin firm.</p>
-                  <a href="https://github.com/saadmuavia-dev" title="See All"
-                    data-gallery="https://github.com/saadmuavia-dev" class=" preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="https://saadmuavia-dev.github.io/enno-landing/" target="_blank" title="Go to page"
-                    class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/IMG-20250915-WA0007.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Site 5</h4>
-                  <p>A site for carrier counsling experts.</p>
-                  <a href="https://github.com/saadmuavia-dev" title="See All"
-                    data-gallery="https://github.com/saadmuavia-dev" class=" preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="https://saadmuavia-dev.github.io/elixir/" target="_blank" title="Go to page"
-                    class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/IMG-20250915-WA0010.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Site 7</h4>
-                  <p>My Cv</p>
-                  <a href="https://github.com/saadmuavia-dev" title="See All"
-                    data-gallery="https://github.com/saadmuavia-dev" class=" preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="https://saadmuavia-dev.github.io/about-me/ 
-" target="_blank" title="Go to page" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/IMG-20250915-WA0009.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Site 9</h4>
-                  <p>A resturent's web template.</p>
-                  <a href="hhttps://github.com/saadmuavia-dev" title="See All"
-                    data-gallery="https://github.com/saadmuavia-dev" class=" preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href=" https://saadmuavia-dev.github.io/restorant/" target="_blank" title="Go to page"
-                    class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/IMG-20250915-WA0010.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>my Portfolio</h4>
-                  <p>My portfolio as a professional web developer.</p>
-                  <a href="https://github.com/saadmuavia-dev" title="See All"
-                    data-gallery="https://github.com/saadmuavia-dev" class=" preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="https://saadmuavia-dev.github.io/Portofolio/
-" target="_blank" title="Go to page" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-
-
-
-
-
-
-          </div>
-
-        </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>. I specialize in both FullStack development, where I build clean and user-friendly interfaces, and backend
-          development, where I design powerful APIs and server-side systems to keep everything running smoothly. As a
-          full-stack developer, I handle projects end-to-end, from planning and coding to deployment and support. I also
-          provide cloud and hosting setup on platforms like AWS and Firebase, ensuring your product is always live and
-          scalable.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
-            <div>
-              <h4 class="title">Full-Stack Solutions</h4>
-              <p class="description">Whether it’s a simple web app or a complex platform, I deliver reliable, full-scale
-                solutions tailored to your needs.</p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
-            <div>
-              <h4 class="title">Web Development
-              </h4>
-              <p class="description">
-                Custom websites built with modern technologies, optimized for speed, security, and scalability.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
-            <div>
-              <h4 class="title">Maintenance & Support</h4>
-              <p class="description">
-
-                Ongoing updates, bug fixes, and technical support for your projects.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-
-
-
-
-
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p class="ps-2">“Trusted by clients, designers, and developers” <br>
-
-          “Here’s why others enjoy working with me” <br>
-
-          “Real words from real collaborations”</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Saad is a highly skilled FullStack developer with a great eye for detail. He transformed our
-                    design into a responsive, user-friendly website that exceeded our expectations.”.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>“Working with Saad was smooth and professional. His knowledge of HTML, CSS, and React made our
-                    project run faster and more efficiently.”
-                  </span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>
-                    “Saad always delivers clean code and creative solutions. He’s dedicated, reliable, and a valuable
-                    team player.”
-                  </span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>
-                    “Saad is a highly skilled FullStack developer with a great eye for detail. He transformed our design
-                    into a responsive, user-friendly website that exceeded our expectations.”</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>“I was impressed by Saad’s ability to turn design mockups into pixel-perfect code. He not only
-                    implemented the UI but also improved performance and accessibility.”</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>“Have a project in mind? <br>Let’s bring it to life together!”</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>Lodhran, Punjab Pakistan</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Me</h3>
-                  <p>+92 346 2705953</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Me</h3>
-                  <p>saadmuavia36203@gmail.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.804269739098!2d71.5778786734129!3d29.696453879965137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b73bf19441293%3A0x2952c6f3cc8fa413!2sTarbela%20Bus%20stop%20Lodhr%C4%81n!5e0!3m2!1sen!2s!4v1758006541342!5m2!1sen!2s"
-                frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
-
+  </div>
+</nav>
+
+<!-- HERO -->
+<main class="page-content">
+  <section class="section-wrap" style="min-height:calc(100vh - 68px); display:flex; align-items:center;">
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Developer</strong> <span>All Rights Reserved</span>
-        </p>
-      </div>
-      <div class="credits">
+      <div class="row align-items-center g-5">
 
-      Coded by <a href="https://saadmuavia-dev.github.io/about-me/
-"><i><strong>Coder SAAD </strong></i></a>
-        Distributed by <a href="https://github.com/saadmuavia-dev">Github organization</a>
+        <!-- Left Text -->
+        <div class="col-lg-6">
+          <div class="reveal" data-delay="0">
+            <div class="d-inline-flex align-items-center gap-2 mb-4 px-3 py-2 rounded-pill"
+                 style="background:rgba(62,201,214,.1);border:1px solid rgba(62,201,214,.25);">
+              <div class="pulse-dot"></div>
+              <span style="font-family:var(--font-display);font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1.5px;">AVAILABLE FOR WORK</span>
+            </div>
+          </div>
+
+          <div class="reveal" data-delay="0.1">
+            <h1 style="font-size:clamp(38px,5.5vw,72px);font-weight:800;line-height:1.03;margin-bottom:20px;">
+              Hi, I'm<br>
+              <span class="grad-text">Saad Muavia</span>
+            </h1>
+          </div>
+
+          <div class="reveal" data-delay="0.2">
+            <p style="font-size:17px;color:var(--muted);line-height:1.8;max-width:480px;margin-bottom:32px;">
+              Full Stack Web Developer crafting dynamic, fast, and beautiful digital experiences.
+              From Lodhran — building for the world 🌍
+            </p>
+          </div>
+
+          <div class="reveal" data-delay="0.3">
+            <div class="d-flex gap-3 flex-wrap mb-5">
+              <a href="pages/projects.html" class="btn-grad">View Projects ✨</a>
+              <a href="pages/contact.html" class="btn-outline-sc">Let's Talk →</a>
+            </div>
+          </div>
+
+          <div class="reveal" data-delay="0.4">
+            <div class="d-flex gap-4">
+              <div>
+                <div class="stat-number"><span class="counter" data-to="6" data-suffix="+">0</span></div>
+                <div style="font-size:12px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;">Projects Built</div>
+              </div>
+              <div>
+                <div class="stat-number"><span class="counter" data-to="2" data-suffix=" Yrs">0</span></div>
+                <div style="font-size:12px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;">Learning</div>
+              </div>
+              <div>
+                <div class="stat-number"><span class="counter" data-to="10" data-suffix="+">0</span></div>
+                <div style="font-size:12px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;">Tech Skills</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Avatar -->
+        <div class="col-lg-6 text-center">
+          <div class="reveal from-left" data-delay="0.15">
+            <div class="d-inline-block position-relative float-anim">
+
+              <!-- Profile image placeholder -->
+              <div class="hero-avatar-wrap mx-auto">
+                <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.25));border-radius:inherit;"></div>
+                <!-- Replace the img tag src with your photo -->
+                <img id="heroPhoto" src="" alt="Saad Muavia"
+                     style="width:100%;height:100%;object-fit:cover;border-radius:inherit;display:none;"
+                     onerror="this.style.display='none'"/>
+                <span id="heroEmoji" style="position:relative;z-index:1;font-size:100px;">👨‍💻</span>
+              </div>
+
+              <!-- Orbit badges -->
+              <div class="orbit-badge" style="top:-20px;right:-30px;">⚛️<span class="label">React</span></div>
+              <div class="orbit-badge" style="bottom:-20px;right:-30px;">🟢<span class="label">Node</span></div>
+              <div class="orbit-badge" style="bottom:-20px;left:-30px;">🍃<span class="label">Mongo</span></div>
+              <div class="orbit-badge" style="top:-20px;left:-30px;">🎨<span class="label">CSS</span></div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+  </section>
 
-  </footer>
+  <!-- Marquee -->
+  <div class="marquee-wrap">
+    <div class="marquee-inner">
+      <span>React.js</span><span class="dot">✦</span>
+      <span>Node.js</span><span class="dot">✦</span>
+      <span>MongoDB</span><span class="dot">✦</span>
+      <span>Bootstrap 5</span><span class="dot">✦</span>
+      <span>JavaScript</span><span class="dot">✦</span>
+      <span>HTML5</span><span class="dot">✦</span>
+      <span>CSS3</span><span class="dot">✦</span>
+      <span>Express.js</span><span class="dot">✦</span>
+      <span>REST APIs</span><span class="dot">✦</span>
+      <span>Full Stack</span><span class="dot">✦</span>
+    </div>
+  </div>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <!-- Quick Nav Cards -->
+  <section class="section-wrap">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-tag">EXPLORE</span>
+        <h2 class="section-title">Navigate My Portfolio</h2>
+        <div class="title-line mx-auto"></div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <a href="pages/about.html" class="sc-card d-block p-4 text-center reveal" data-delay="0.0" style="text-decoration:none;">
+            <div style="font-size:48px;margin-bottom:16px;">🧑‍💻</div>
+            <h5 style="font-family:var(--font-display);color:var(--text);margin-bottom:8px;">About Me</h5>
+            <p style="font-size:13px;color:var(--muted);">Education, background & skill set</p>
+            <div style="width:36px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin:12px auto 0;"></div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="pages/services.html" class="sc-card d-block p-4 text-center reveal" data-delay="0.08" style="text-decoration:none;">
+            <div style="font-size:48px;margin-bottom:16px;">⚙️</div>
+            <h5 style="font-family:var(--font-display);color:var(--text);margin-bottom:8px;">Services</h5>
+            <p style="font-size:13px;color:var(--muted);">What I can build for you</p>
+            <div style="width:36px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin:12px auto 0;"></div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="pages/projects.html" class="sc-card d-block p-4 text-center reveal" data-delay="0.16" style="text-decoration:none;">
+            <div style="font-size:48px;margin-bottom:16px;">🛠️</div>
+            <h5 style="font-family:var(--font-display);color:var(--text);margin-bottom:8px;">Projects</h5>
+            <p style="font-size:13px;color:var(--muted);">Full stack work & showcases</p>
+            <div style="width:36px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin:12px auto 0;"></div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="pages/contact.html" class="sc-card d-block p-4 text-center reveal" data-delay="0.24" style="text-decoration:none;">
+            <div style="font-size:48px;margin-bottom:16px;">💬</div>
+            <h5 style="font-family:var(--font-display);color:var(--text);margin-bottom:8px;">Contact</h5>
+            <p style="font-size:13px;color:var(--muted);">Get in touch — let's collaborate</p>
+            <div style="width:36px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin:12px auto 0;"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div style="font-family:var(--font-display);font-weight:800;font-size:22px;" class="mb-2">
+      <span class="grad-text">Saad Muavia</span>
+    </div>
+    <p style="font-size:13px;color:var(--muted);">Full Stack Web Developer · Lodhran, Pakistan</p>
+    <div class="d-flex justify-content-center gap-3 mt-3">
+      <a href="pages/about.html" style="font-size:12px;color:var(--muted);">About</a>
+      <a href="pages/services.html" style="font-size:12px;color:var(--muted);">Services</a>
+      <a href="pages/projects.html" style="font-size:12px;color:var(--muted);">Projects</a>
+      <a href="pages/contact.html" style="font-size:12px;color:var(--muted);">Contact</a>
+    </div>
+    <p style="font-size:11px;color:var(--border);margin-top:20px;">© 2026 Saad Muavia. Crafted with ❤️ in Lodhran</p>
+  </div>
+</footer>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
-
 </html>

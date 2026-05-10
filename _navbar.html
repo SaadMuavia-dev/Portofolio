@@ -1,0 +1,47 @@
+<!-- ══ NAVBAR (copy into every page inside <body>) ══ -->
+<nav id="mainNav">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a href="../index.html" class="nav-logo" aria-label="Saad Coder Home">
+      <svg viewBox="0 0 180 44" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%"   stop-color="#3ec9d6"/>
+            <stop offset="50%"  stop-color="#5db89a"/>
+            <stop offset="100%" stop-color="#8b7fb8"/>
+          </linearGradient>
+          <linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"  stop-color="#3ec9d6"/>
+            <stop offset="100%" stop-color="#5db89a"/>
+          </linearGradient>
+        </defs>
+        <!-- Icon mark: < / > -->
+        <rect x="1" y="1" width="40" height="40" rx="10" fill="url(#lg1)"/>
+        <text x="21" y="28" text-anchor="middle" font-family="'Syne',sans-serif" font-weight="800"
+              font-size="17" fill="#fff" letter-spacing="-1">&lt;/&gt;</text>
+        <!-- Wordmark -->
+        <text x="50" y="20" font-family="'Syne',sans-serif" font-weight="800"
+              font-size="15" fill="url(#lg2)" letter-spacing=".5">SAAD</text>
+        <text x="50" y="37" font-family="'Syne',sans-serif" font-weight="400"
+              font-size="12" fill="#6a92ad" letter-spacing="3">CODER</text>
+      </svg>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" id="mobileMenu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="d-flex align-items-center gap-2">
+      <button class="theme-btn" onclick="toggleTheme()">🌙 Dark</button>
+      <button class="navbar-toggler-custom" onclick="toggleMenu()">☰</button>
+    </div>
+
+  </div>
+</nav>
+<!-- ══ END NAVBAR ══ -->
