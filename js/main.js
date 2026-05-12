@@ -2,24 +2,13 @@
    SAAD CODER PORTFOLIO — main.js
    ===================================================== */
 
-/* ── Theme Toggle ── */
+/* ── Auto Theme (system detect) ── */
 (function () {
-  const saved = localStorage.getItem('sc-theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', saved);
-  updateThemeBtn(saved);
-
-  window.toggleTheme = function () {
-    const cur = document.documentElement.getAttribute('data-theme');
-    const next = cur === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('sc-theme', next);
-    updateThemeBtn(next);
-  };
-
-  function updateThemeBtn(theme) {
-    const btns = document.querySelectorAll('.theme-btn');
-    btns.forEach(b => { b.innerHTML = theme === 'dark' ? '☀️ Light' : '🌙 Dark'; });
-  }
+  const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+  });
 })();
 
 /* ── Mobile Nav ── */
