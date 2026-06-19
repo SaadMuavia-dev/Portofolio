@@ -1,218 +1,634 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Saad Muavia — Full Stack Developer</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='10' fill='%233ec9d6'/><text x='20' y='27' text-anchor='middle' font-size='18' font-family='monospace' fill='white'>S</text></svg>"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="css/style.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevSphere Studio | Full Stack Developer &amp; AI Trainer Portfolio</title>
+<meta name="description" content="DevSphere Studio — premium portfolio of a Full Stack Developer, IT Expert, and AI Trainer. Modern, scalable digital experiences.">
+
+<!-- Favicon -->
+<link rel="icon" href="data:,">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Blobs -->
-<div class="blob-wrap">
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
+<!-- Preloader -->
+<div id="preloader">
+  <div class="loader-logo">
+    <div class="loader-ring"></div>
+    <span>DevSphere</span>
+  </div>
 </div>
 
-<!-- NAVBAR -->
-<nav id="mainNav">
-  <div class="container-fluid">
-    <a href="index.html" class="nav-logo" aria-label="Saad Coder">
-      <svg viewBox="0 0 180 44" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#3ec9d6"/><stop offset="50%" stop-color="#5db89a"/><stop offset="100%" stop-color="#8b7fb8"/>
-          </linearGradient>
-          <linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#3ec9d6"/><stop offset="100%" stop-color="#5db89a"/>
-          </linearGradient>
-        </defs>
-        <rect x="1" y="1" width="40" height="40" rx="10" fill="url(#lg1)"/>
-        <text x="21" y="28" text-anchor="middle" font-family="'Syne',sans-serif" font-weight="800" font-size="17" fill="#fff" letter-spacing="-1">&lt;/&gt;</text>
-        <text x="50" y="20" font-family="'Syne',sans-serif" font-weight="800" font-size="15" fill="url(#lg2)" letter-spacing=".5">SAAD</text>
-        <text x="50" y="37" font-family="'Syne',sans-serif" font-weight="400" font-size="12" fill="#6a92ad" letter-spacing="3">CODER</text>
-      </svg>
+<canvas id="particle-canvas"></canvas>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-premium" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand brand-logo" href="index.html">
+      <span class="brand-mark">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 21V5H10.5C14.5 5 17 7.5 17 13C17 18.5 14.5 21 10.5 21H4Z" stroke="#3B82F6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M19 9.5L22.5 13L19 16.5" stroke="#06B6D4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand-text">DevSphere<span>STUDIO</span></span>
     </a>
-    <ul class="nav-links" id="mobileMenu">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="d-flex align-items-center gap-2">
-      <button class="navbar-toggler-custom" onclick="toggleMenu()">☰</button>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="fa-solid fa-bars fs-4 text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-3 mt-3 mt-lg-0"><a class="btn-glow" href="contact.html">Hire Me</a></li>
+      </ul>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<main class="page-content">
-  <section class="section-wrap" style="min-height:calc(100vh - 68px); display:flex; align-items:center;">
-    <div class="container">
-      <div class="row align-items-center g-5">
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-bg-glow"></div>
+  <div class="floating-icons">
+    <i class="fa-brands fa-html5 float-icon" style="top:18%;left:8%;animation-delay:0s;"></i>
+    <i class="fa-brands fa-css3-alt float-icon" style="top:65%;left:14%;animation-delay:1s;"></i>
+    <i class="fa-brands fa-js float-icon" style="top:25%;left:88%;animation-delay:2s;"></i>
+    <i class="fa-brands fa-react float-icon" style="top:75%;left:85%;animation-delay:1.4s;"></i>
+    <i class="fa-brands fa-bootstrap float-icon" style="top:45%;left:5%;animation-delay:2.6s;"></i>
+    <i class="fa-solid fa-robot float-icon" style="top:40%;left:92%;animation-delay:.6s;"></i>
+  </div>
 
-        <!-- Left Text -->
-        <div class="col-lg-6">
-          <div class="reveal" data-delay="0">
-            <div class="d-inline-flex align-items-center gap-2 mb-4 px-3 py-2 rounded-pill"
-                 style="background:rgba(62,201,214,.1);border:1px solid rgba(62,201,214,.25);">
-              <div class="pulse-dot"></div>
-              <span style="font-family:var(--font-display);font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1.5px;">AVAILABLE FOR WORK</span>
-            </div>
-          </div>
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
+    <div class="carousel-inner">
 
-          <div class="reveal" data-delay="0.1">
-            <h1 style="font-size:clamp(38px,5.5vw,72px);font-weight:800;line-height:1.03;margin-bottom:20px;">
-              Hi, I'm<br>
-              <span class="grad-text">Saad Muavia</span>
-            </h1>
-          </div>
-
-          <div class="reveal" data-delay="0.2">
-            <p style="font-size:17px;color:var(--muted);line-height:1.8;max-width:480px;margin-bottom:32px;">
-              Full Stack Web Developer crafting dynamic, fast, and beautiful digital experiences.
-              From Lodhran — building for the world 🌍
-            </p>
-          </div>
-
-          <div class="reveal" data-delay="0.3">
-            <div class="d-flex gap-3 flex-wrap mb-5">
-              <a href="projects.html" class="btn-grad">View Projects ✨</a>
-              <a href="contact.html" class="btn-outline-sc">Let's Talk →</a>
-            </div>
-          </div>
-
-          <div class="reveal" data-delay="0.4">
-            <div class="d-flex gap-4">
-              <div>
-                <div class="stat-number"><span class="counter" data-to="6" data-suffix="+">0</span></div>
-                <div style="font-size:12px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;">Projects Built</div>
-              </div>
-              <div>
-                <div class="stat-number"><span class="counter" data-to="2" data-suffix=" Yrs">0</span></div>
-                <div style="font-size:12px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;">Learning</div>
-              </div>
-              <div>
-                <div class="stat-number"><span class="counter" data-to="10" data-suffix="+">0</span></div>
-                <div style="font-size:12px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;">Tech Skills</div>
+      <div class="carousel-item active">
+        <div class="container hero-content">
+          <div class="row">
+            <div class="col-lg-8">
+              <span class="hero-eyebrow"><span class="dot"></span> Available for hire</span>
+              <h1 class="hero-title">Full Stack <span class="text-gradient" id="heroTyped" data-words='["Developer","Architect","Engineer"]'></span></h1>
+              <p class="hero-subtitle">Building modern scalable digital experiences.</p>
+              <div class="hero-cta">
+                <a href="contact.html" class="btn-glow btn-pill">Hire Me <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                <a href="about.html" class="btn-outline-glow btn-pill">View My Work</a>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Right Avatar -->
-        <div class="col-lg-6 text-center">
-          <div class="reveal from-left" data-delay="0.15">
-            <div class="d-inline-block position-relative float-anim">
-
-              <!-- Profile image placeholder -->
-              <div class="hero-avatar-wrap mx-auto">
-                <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.25));border-radius:inherit;"></div>
-                <!-- Replace the img tag src with your photo -->
-                <img id="heroPhoto" src="" alt="Saad Muavia"
-                     style="width:100%;height:100%;object-fit:cover;border-radius:inherit;display:none;"
-                     onerror="this.style.display='none'"/>
-                <span id="heroEmoji" style="position:relative;z-index:1;font-size:100px;">👨‍💻</span>
-              </div>
-
-              <!-- Orbit badges -->
-              <div class="orbit-badge" style="top:-20px;right:-30px;">⚛️<span class="label">React</span></div>
-              <div class="orbit-badge" style="bottom:-20px;right:-30px;">🟢<span class="label">Node</span></div>
-              <div class="orbit-badge" style="bottom:-20px;left:-30px;">🍃<span class="label">Mongo</span></div>
-              <div class="orbit-badge" style="top:-20px;left:-30px;">🎨<span class="label">CSS</span></div>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
 
-  <!-- Marquee -->
-  <div class="marquee-wrap">
-    <div class="marquee-inner">
-      <span>React.js</span><span class="dot">✦</span>
-      <span>Node.js</span><span class="dot">✦</span>
-      <span>MongoDB</span><span class="dot">✦</span>
-      <span>Bootstrap 5</span><span class="dot">✦</span>
-      <span>JavaScript</span><span class="dot">✦</span>
-      <span>HTML5</span><span class="dot">✦</span>
-      <span>CSS3</span><span class="dot">✦</span>
-      <span>Express.js</span><span class="dot">✦</span>
-      <span>REST APIs</span><span class="dot">✦</span>
-      <span>Full Stack</span><span class="dot">✦</span>
+      <div class="carousel-item">
+        <div class="container hero-content">
+          <div class="row">
+            <div class="col-lg-8">
+              <span class="hero-eyebrow"><span class="dot"></span> Available for hire</span>
+              <h1 class="hero-title">IT <span class="text-gradient">Expert</span></h1>
+              <p class="hero-subtitle">Solving technology challenges with smart solutions.</p>
+              <div class="hero-cta">
+                <a href="contact.html" class="btn-glow btn-pill">Hire Me <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                <a href="skills.html" class="btn-outline-glow btn-pill">See My Skills</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="container hero-content">
+          <div class="row">
+            <div class="col-lg-8">
+              <span class="hero-eyebrow"><span class="dot"></span> Available for hire</span>
+              <h1 class="hero-title">AI <span class="text-gradient">Trainer</span></h1>
+              <p class="hero-subtitle">Training intelligent systems for the future.</p>
+              <div class="hero-cta">
+                <a href="contact.html" class="btn-glow btn-pill">Hire Me <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                <a href="about.html" class="btn-outline-glow btn-pill">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
     </div>
   </div>
 
-  <!-- Quick Nav Cards -->
-  <section class="section-wrap">
-    <div class="container">
-      <div class="text-center mb-5 reveal">
-        <span class="section-tag">EXPLORE</span>
-        <h2 class="section-title">Navigate My Portfolio</h2>
-        <div class="title-line mx-auto"></div>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <a href="about.html" class="sc-card d-block p-4 text-center reveal" data-delay="0.0" style="text-decoration:none;">
-            <div style="font-size:48px;margin-bottom:16px;">🧑‍💻</div>
-            <h5 style="font-family:var(--font-display);color:var(--text);margin-bottom:8px;">About Me</h5>
-            <p style="font-size:13px;color:var(--muted);">Education, background & skill set</p>
-            <div style="width:36px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin:12px auto 0;"></div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <a href="services.html" class="sc-card d-block p-4 text-center reveal" data-delay="0.08" style="text-decoration:none;">
-            <div style="font-size:48px;margin-bottom:16px;">⚙️</div>
-            <h5 style="font-family:var(--font-display);color:var(--text);margin-bottom:8px;">Services</h5>
-            <p style="font-size:13px;color:var(--muted);">What I can build for you</p>
-            <div style="width:36px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin:12px auto 0;"></div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <a href="projects.html" class="sc-card d-block p-4 text-center reveal" data-delay="0.16" style="text-decoration:none;">
-            <div style="font-size:48px;margin-bottom:16px;">🛠️</div>
-            <h5 style="font-family:var(--font-display);color:var(--text);margin-bottom:8px;">Projects</h5>
-            <p style="font-size:13px;color:var(--muted);">Full stack work & showcases</p>
-            <div style="width:36px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin:12px auto 0;"></div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <a href="contact.html" class="sc-card d-block p-4 text-center reveal" data-delay="0.24" style="text-decoration:none;">
-            <div style="font-size:48px;margin-bottom:16px;">💬</div>
-            <h5 style="font-family:var(--font-display);color:var(--text);margin-bottom:8px;">Contact</h5>
-            <p style="font-size:13px;color:var(--muted);">Get in touch — let's collaborate</p>
-            <div style="width:36px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin:12px auto 0;"></div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+</header>
 
-<!-- FOOTER -->
-<footer>
+<!-- ============ EXPERIENCE SECTION ============ -->
+<section class="section" id="experience">
   <div class="container">
-    <div style="font-family:var(--font-display);font-weight:800;font-size:22px;" class="mb-2">
-      <span class="grad-text">Saad Muavia</span>
+    <div class="text-center mb-5 reveal">
+      <span class="eyebrow">Experience</span>
+      <h2 class="section-title">Real-World <span class="text-gradient">Experience</span></h2>
+      <p class="section-sub mx-auto">A track record built on practical projects, continuous learning, and genuine problem-solving.</p>
+      <div class="glow-divider"></div>
     </div>
-    <p style="font-size:13px;color:var(--muted);">Full Stack Web Developer · Lodhran, Pakistan</p>
-    <div class="d-flex justify-content-center gap-3 mt-3">
-      <a href="about.html" style="font-size:12px;color:var(--muted);">About</a>
-      <a href="services.html" style="font-size:12px;color:var(--muted);">Services</a>
-      <a href="projects.html" style="font-size:12px;color:var(--muted);">Projects</a>
-      <a href="contact.html" style="font-size:12px;color:var(--muted);">Contact</a>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="glass card-premium exp-card reveal">
+          <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+          <h4>3+ Years Experience</h4>
+          <p class="text-secondary-light" style="color:var(--gray);">Practical, hands-on experience in modern web development.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="glass card-premium exp-card reveal reveal-delay-1">
+          <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+          <h4>12+ Real Projects</h4>
+          <p style="color:var(--gray);">Portfolio sites, business websites, UI designs &amp; modern interfaces.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="glass card-premium exp-card reveal reveal-delay-2">
+          <div class="icon-box"><i class="fa-solid fa-handshake"></i></div>
+          <h4>Open to Opportunities</h4>
+          <p style="color:var(--gray);">Internships, full-time roles, and freelance collaborations.</p>
+        </div>
+      </div>
     </div>
-    <p style="font-size:11px;color:var(--border);margin-top:20px;">© 2026 Coded with ❤️  Saad Muavia from Lodhran.</p>
+
+    <div class="glass p-4 p-lg-5 reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <p class="mb-0 fs-5" style="color:var(--gray);line-height:1.8;">
+            I have 3+ years of practical experience in web development and technology. I have successfully worked on 12+ real projects including portfolio websites, business websites, UI designs, and modern web interfaces. I am currently open to internship opportunities, job offers, and freelance collaborations.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="d-flex flex-column gap-2">
+            <span class="badge-avail"><i class="fa-solid fa-circle-check text-info me-2"></i>Available for Internship</span>
+            <span class="badge-avail"><i class="fa-solid fa-circle-check text-info me-2"></i>Available for Job Opportunities</span>
+            <span class="badge-avail"><i class="fa-solid fa-circle-check text-info me-2"></i>Available for Freelance Work</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-cta mt-4">
+        <a href="contact.html" class="btn-glow btn-pill">Hire Me</a>
+        <a href="assets/Saad_Muavia_Resume_Updated.docx" class="btn-outline-glow btn-pill" download="Saad_Muavia_Resume.docx">Download CV</a>
+        <a href="contact.html" class="btn-outline-glow btn-pill">Contact Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS SECTION ============ -->
+<section class="section section-sm" id="projects" style="background:var(--navy-soft);">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="eyebrow">Portfolio</span>
+      <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+      <p class="section-sub mx-auto">A selection of work spanning web, UI, and AI-driven interfaces.</p>
+      <div class="glow-divider"></div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Project 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="glass project-card reveal">
+          <div class="project-img"><i class="fa-solid fa-laptop-code"></i></div>
+          <div class="project-body">
+            <h5>Portfolio Website</h5>
+            <p style="color:var(--gray);font-size:.9rem;">A sleek personal portfolio with smooth animations and responsive layout.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <div class="project-links">
+              <a href="#" class="live">Live Demo</a>
+              <a href="#" class="code"><i class="fa-brands fa-github me-1"></i>GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="glass project-card reveal reveal-delay-1">
+          <div class="project-img"><i class="fa-solid fa-building"></i></div>
+          <div class="project-body">
+            <h5>Business Website</h5>
+            <p style="color:var(--gray);font-size:.9rem;">Corporate site with service pages, contact forms, and SEO setup.</p>
+            <div class="project-tags"><span>Bootstrap</span><span>PHP</span></div>
+            <div class="project-links">
+              <a href="#" class="live">Live Demo</a>
+              <a href="#" class="code"><i class="fa-brands fa-github me-1"></i>GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="glass project-card reveal reveal-delay-2">
+          <div class="project-img"><i class="fa-solid fa-cart-shopping"></i></div>
+          <div class="project-body">
+            <h5>E-commerce UI</h5>
+            <p style="color:var(--gray);font-size:.9rem;">Product listing, cart, and checkout flow with modern UI patterns.</p>
+            <div class="project-tags"><span>JavaScript</span><span>UI/UX</span></div>
+            <div class="project-links">
+              <a href="#" class="live">Live Demo</a>
+              <a href="#" class="code"><i class="fa-brands fa-github me-1"></i>GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="glass project-card reveal">
+          <div class="project-img"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="project-body">
+            <h5>Dashboard UI</h5>
+            <p style="color:var(--gray);font-size:.9rem;">Analytics dashboard with charts, tables, and live data widgets.</p>
+            <div class="project-tags"><span>JS</span><span>Chart.js</span></div>
+            <div class="project-links">
+              <a href="#" class="live">Live Demo</a>
+              <a href="#" class="code"><i class="fa-brands fa-github me-1"></i>GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="glass project-card reveal reveal-delay-1">
+          <div class="project-img"><i class="fa-solid fa-rocket"></i></div>
+          <div class="project-body">
+            <h5>Landing Page</h5>
+            <p style="color:var(--gray);font-size:.9rem;">High-converting landing page with animation-driven storytelling.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS3</span></div>
+            <div class="project-links">
+              <a href="#" class="live">Live Demo</a>
+              <a href="#" class="code"><i class="fa-brands fa-github me-1"></i>GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="glass project-card reveal reveal-delay-2">
+          <div class="project-img"><i class="fa-solid fa-robot"></i></div>
+          <div class="project-body">
+            <h5>AI Tool Interface</h5>
+            <p style="color:var(--gray);font-size:.9rem;">Conversational AI interface with prompt tuning and response preview.</p>
+            <div class="project-tags"><span>AI</span><span>JavaScript</span></div>
+            <div class="project-links">
+              <a href="#" class="live">Live Demo</a>
+              <a href="#" class="code"><i class="fa-brands fa-github me-1"></i>GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES SECTION ============ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="eyebrow">Services</span>
+      <h2 class="section-title">What I Can <span class="text-gradient">Do For You</span></h2>
+      <p class="section-sub mx-auto">End-to-end web and AI services tailored to your goals.</p>
+      <div class="glow-divider"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="glass card-premium service-card reveal">
+          <span class="service-num">01</span>
+          <div class="icon-box"><i class="fa-solid fa-globe"></i></div>
+          <h5>Website Development</h5>
+          <p style="color:var(--gray);font-size:.92rem;">Responsive, fast, and scalable websites built with modern best practices.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="glass card-premium service-card reveal reveal-delay-1">
+          <span class="service-num">02</span>
+          <div class="icon-box"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h5>UI/UX Design</h5>
+          <p style="color:var(--gray);font-size:.92rem;">Clean, user-centered interfaces that feel intuitive and premium.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="glass card-premium service-card reveal reveal-delay-2">
+          <span class="service-num">03</span>
+          <div class="icon-box"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <h5>SEO Optimization</h5>
+          <p style="color:var(--gray);font-size:.92rem;">On-page SEO and performance tuning to help you rank and load faster.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="glass card-premium service-card reveal">
+          <span class="service-num">04</span>
+          <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
+          <h5>AI Consultation</h5>
+          <p style="color:var(--gray);font-size:.92rem;">Guidance on integrating and training AI systems for real workflows.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="glass card-premium service-card reveal reveal-delay-1">
+          <span class="service-num">05</span>
+          <div class="icon-box"><i class="fa-solid fa-display"></i></div>
+          <h5>Frontend Development</h5>
+          <p style="color:var(--gray);font-size:.92rem;">Pixel-perfect, interactive frontends built with HTML, CSS &amp; JS.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="glass card-premium service-card reveal reveal-delay-2">
+          <span class="service-num">06</span>
+          <div class="icon-box"><i class="fa-solid fa-bug"></i></div>
+          <h5>Bug Fixing</h5>
+          <p style="color:var(--gray);font-size:.92rem;">Fast, reliable debugging to keep your site running smoothly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY HIRE ME ============ -->
+<section class="section section-sm" style="background:var(--navy-soft);">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 reveal">
+        <span class="eyebrow">Why Me</span>
+        <h2 class="section-title">Why <span class="text-gradient">Hire Me</span></h2>
+        <p class="section-sub" style="margin:0 0 20px;">Here's what working with me looks like, day one to delivery.</p>
+        <a href="contact.html" class="btn-glow btn-pill">Let's Talk</a>
+      </div>
+      <div class="col-lg-7">
+        <div class="glass p-4 p-lg-5 reveal reveal-delay-1">
+          <div class="why-item">
+            <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div><h6 class="mb-1">Fast Delivery</h6><p class="mb-0" style="color:var(--gray);font-size:.9rem;">Projects shipped on time, every time.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><i class="fa-solid fa-code-branch"></i></div>
+            <div><h6 class="mb-1">Clean Code</h6><p class="mb-0" style="color:var(--gray);font-size:.9rem;">Maintainable, well-structured, documented code.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <div><h6 class="mb-1">Modern UI</h6><p class="mb-0" style="color:var(--gray);font-size:.9rem;">Designs that feel current and premium.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><i class="fa-solid fa-comments"></i></div>
+            <div><h6 class="mb-1">Strong Communication</h6><p class="mb-0" style="color:var(--gray);font-size:.9rem;">Clear updates from kickoff to launch.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><i class="fa-solid fa-face-smile"></i></div>
+            <div><h6 class="mb-1">Client Satisfaction</h6><p class="mb-0" style="color:var(--gray);font-size:.9rem;">Your goals drive every decision I make.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="eyebrow">Testimonials</span>
+      <h2 class="section-title">What Clients <span class="text-gradient">Say</span></h2>
+      <div class="glow-divider"></div>
+    </div>
+
+    <div id="testimonialCarousel" class="carousel slide reveal" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="glass testimonial-card">
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="testimonial-text">"Delivered our business site ahead of schedule with flawless attention to detail."</p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">A</div>
+                  <div><div class="testimonial-name">Ayesha Khan</div><div class="testimonial-role">Founder, Loomly Co.</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="glass testimonial-card">
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="testimonial-text">"Our dashboard UI looks incredible and performs even better. Highly recommend."</p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">M</div>
+                  <div><div class="testimonial-name">Mohammed Raza</div><div class="testimonial-role">CTO, Pixel Forge</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="glass testimonial-card">
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                <p class="testimonial-text">"Communicative, fast, and genuinely cares about getting the details right."</p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">S</div>
+                  <div><div class="testimonial-name">Sara Ahmed</div><div class="testimonial-role">Marketing Lead, Nuvio</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="glass testimonial-card">
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="testimonial-text">"The AI tool interface he built made our workflow twice as fast."</p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">D</div>
+                  <div><div class="testimonial-name">Daniyal Hussain</div><div class="testimonial-role">Product Manager, NexAI</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="glass testimonial-card">
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="testimonial-text">"Top-tier landing page design. Conversions improved within the first week."</p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">H</div>
+                  <div><div class="testimonial-name">Hira Saleem</div><div class="testimonial-role">Growth Lead, Brightlane</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="glass testimonial-card">
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="testimonial-text">"Reliable, skilled, and easy to work with from start to finish."</p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">U</div>
+                  <div><div class="testimonial-name">Usman Tariq</div><div class="testimonial-role">CEO, Vertex Labs</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section section-sm" id="faq" style="background:var(--navy-soft);">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+      <div class="glow-divider"></div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="accordion accordion-premium reveal" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What services do you provide?</button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">I provide website development, UI/UX design, SEO optimization, AI consultation, frontend development, and bug fixing services.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">How much do websites cost?</button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Pricing depends on scope, complexity, and timeline. Reach out via the contact page and I'll provide a tailored quote.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">How long does delivery take?</button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Most projects are delivered within 1-4 weeks depending on size and requirements, with regular progress updates.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Do you provide support?</button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Yes — I offer post-launch support and maintenance to keep your site running smoothly.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="section-sm">
+  <div class="container">
+    <div class="glass p-5 text-center reveal" style="background:var(--gradient-primary);border:none;">
+      <h2 class="mb-3" style="font-size:2rem;">Let's build something great together.</h2>
+      <p class="mb-4" style="color:rgba(255,255,255,.9);">Have a project in mind? I'd love to hear about it.</p>
+      <a href="contact.html" class="btn-pill" style="background:#fff;color:var(--navy);font-weight:700;padding:14px 36px;display:inline-block;">Start a Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer-premium">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a class="navbar-brand brand-logo" href="index.html">
+          <span class="brand-mark">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 21V5H10.5C14.5 5 17 7.5 17 13C17 18.5 14.5 21 10.5 21H4Z" stroke="#3B82F6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M19 9.5L22.5 13L19 16.5" stroke="#06B6D4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="brand-text">DevSphere<span>STUDIO</span></span>
+        </a>
+        <p class="footer-about">Premium web development and AI training services — building modern, scalable digital experiences.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-6">
+        <h6 class="footer-heading">Quick Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="skills.html">Skills</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-4 col-6">
+        <h6 class="footer-heading">More</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <h6 class="footer-heading">Get in Touch</h6>
+        <ul class="list-unstyled footer-links">
+          <li><i class="fa-solid fa-envelope me-2 text-info"></i>hello@devspherestudio.dev</li>
+          <li><i class="fa-solid fa-phone me-2 text-info"></i>+92 300 1234567</li>
+          <li><i class="fa-solid fa-location-dot me-2 text-info"></i>Karachi, Pakistan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> DevSphere Studio. All rights reserved.</span>
+    </div>
   </div>
 </footer>
 
+<!-- ============ FIXED SOCIAL SIDEBAR ============ -->
+<div class="social-fixed-bar">
+  <a href="https://wa.me/923001234567" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <a href="https://linkedin.com" class="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+  <a href="https://github.com" class="github" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+  <a href="https://facebook.com" class="facebook" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="https://instagram.com" class="instagram" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  <a href="mailto:hello@devspherestudio.dev" class="gmail" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+  <a href="tel:+923001234567" class="phone" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+</div>
 
+<!-- Scroll to top -->
+<button class="scroll-top-fixed" id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>AOS.init({ duration: 800, once: true, offset: 60 });</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/script.js"></script>
 </body>
 </html>
