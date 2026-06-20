@@ -230,3 +230,13 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ---------- Lazy-load images already handled via loading="lazy" attribute ---------- */
 
 });
+/* ---------- Hero Carousel Auto-Slide (2s) ---------- */
+const heroCarouselEl = document.getElementById('heroCarousel');
+if (heroCarouselEl && window.bootstrap) {
+  new bootstrap.Carousel(heroCarouselEl, {
+    interval: 4000,
+    pause: 'hover',
+    ride: 'carousel',
+    wrap: true
+  });
+}

@@ -221,7 +221,7 @@ a{text-decoration:none;color:inherit;}
 /* Carousel controls & indicators */
 .carousel-indicators{bottom:30px;}
 .carousel-indicators [data-bs-target]{
-  width:10px;height:10px;border-radius:50%;background:var(--gray);opacity:.4;margin:0 6px;
+  width:20px;height:8px;background:var(--gray);opacity:.4;margin:0 6px; border-radius: 100%;
 }
 .carousel-indicators .active{background:var(--cyan);opacity:1;box-shadow:0 0 10px var(--cyan);}
 
@@ -506,7 +506,7 @@ a{text-decoration:none;color:inherit;}
    FIXED SOCIAL SIDEBAR
    =================================================== */
 .social-fixed-bar{
-  position:fixed;top:50%;left:18px;transform:translateY(-50%);
+  position:fixed;top:80%;left:18px;transform:translateY(-50%);
   z-index:1200;display:flex;flex-direction:column;gap:12px;
 }
 .social-fixed-bar a{
@@ -517,6 +517,7 @@ a{text-decoration:none;color:inherit;}
   color:var(--white);font-size:1.05rem;
   box-shadow:0 8px 24px rgba(0,0,0,.35);
   transition:var(--transition);position:relative;
+  margin-top: 10px !important;
 }
 .social-fixed-bar a:hover{
   transform:translateX(6px) scale(1.08);color:#fff;
@@ -525,9 +526,6 @@ a{text-decoration:none;color:inherit;}
 .social-fixed-bar a.whatsapp:hover{background:#25D366;--hover-color:rgba(37,211,102,.7);}
 .social-fixed-bar a.linkedin:hover{background:#0A66C2;--hover-color:rgba(10,102,194,.7);}
 .social-fixed-bar a.github:hover{background:#333;--hover-color:rgba(255,255,255,.4);}
-.social-fixed-bar a.facebook:hover{background:#1877F2;--hover-color:rgba(24,119,242,.7);}
-.social-fixed-bar a.instagram:hover{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF);--hover-color:rgba(221,42,123,.7);}
-.social-fixed-bar a.gmail:hover{background:#EA4335;--hover-color:rgba(234,67,53,.7);}
 .social-fixed-bar a.phone:hover{background:var(--cyan);--hover-color:rgba(6,182,212,.7);}
 
 .scroll-top-fixed{
