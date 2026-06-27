@@ -72,7 +72,55 @@
 
   <section class="section">
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center g-4">
+        <div class="col-lg-10">
+          <div class="glass p-4 p-lg-5 reveal">
+            <div class="text-center mb-5">
+              <h3 class="mb-2">Send a Message</h3>
+              <p style="color:var(--gray);margin-bottom:0;">Fill out the form below and I'll get back to you as soon
+                as possible.</p>
+            </div>
+
+            <form id="contactForm" class="form-premium" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="cf-name">Full Name</label>
+                  <input type="text" class="form-control" id="cf-name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="cf-email">Email Address</label>
+                  <input type="email" class="form-control" id="cf-email" name="email" placeholder="you@example.com"
+                    required>
+                </div>
+                <div class="col-md-6">
+                  <label for="cf-phone">Phone Number</label>
+                  <input type="tel" class="form-control" id="cf-phone" name="phone" placeholder="+92 3XX XXXXXXX">
+                </div>
+                <div class="col-md-6">
+                  <label for="cf-subject">Subject</label>
+                  <input type="text" class="form-control" id="cf-subject" name="subject"
+                    placeholder="What's this about?">
+                </div>
+                <div class="col-12">
+                  <label for="cf-message">Message</label>
+                  <textarea class="form-control" id="cf-message" name="message" rows="5"
+                    placeholder="Tell me about your project..." required></textarea>
+                </div>
+              </div>
+
+              <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+
+              <div class="text-center mt-4">
+                <button type="submit" class="btn-glow btn-send" id="cf-submit-btn">
+                  <span class="btn-send-label"><i class="fa-solid fa-paper-plane me-2"></i>Send Message</span>
+                  <span class="btn-send-loading d-none"><i
+                      class="fa-solid fa-circle-notch fa-spin me-2"></i>Sending...</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
         <div class="col-lg-10">
           <div class="glass p-4 p-lg-5 reveal">
             <div class="text-center mb-5">
@@ -228,6 +276,77 @@
   <script>AOS.init({ duration: 800, once: true, offset: 60 });</script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="js/script.js"></script>
+
+  <!-- ============ EMAILJS CONTACT FORM ============ -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      // EmailJS public key only — never expose the Private Key in client-side code.
+      const EMAILJS_PUBLIC_KEY = "q4C-a0ReLcgrWD6zD";
+      const EMAILJS_SERVICE_ID = "service_o8uxtpd";
+      const EMAILJS_TEMPLATE_ID = "template_q8cbi9i";
+
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+      const form = document.getElementById('contactForm');
+      const statusBox = document.getElementById('formStatus');
+      const submitBtn = document.getElementById('cf-submit-btn');
+      const labelEl = submitBtn.querySelector('.btn-send-label');
+      const loadingEl = submitBtn.querySelector('.btn-send-loading');
+
+      function setStatus(type, message) {
+        statusBox.className = 'form-status form-status-' + type + ' show';
+        statusBox.innerHTML = '<i class="fa-solid ' +
+          (type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation') +
+          ' me-2"></i>' + message;
+      }
+
+      function clearStatus() {
+        statusBox.className = 'form-status';
+        statusBox.innerHTML = '';
+      }
+
+      function setLoading(isLoading) {
+        submitBtn.disabled = isLoading;
+        labelEl.classList.toggle('d-none', isLoading);
+        loadingEl.classList.toggle('d-none', !isLoading);
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+          form.classList.add('was-validated');
+          setStatus('error', 'Please fill in all required fields correctly.');
+          return;
+        }
+
+        setLoading(true);
+        clearStatus();
+
+        const params = {
+          name: document.getElementById('cf-name').value.trim(),
+          email: document.getElementById('cf-email').value.trim(),
+          phone: document.getElementById('cf-phone').value.trim() || 'Not provided',
+          subject: document.getElementById('cf-subject').value.trim() || 'New Contact Form Submission',
+          message: document.getElementById('cf-message').value.trim()
+        };
+
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
+          .then(function () {
+            setLoading(false);
+            setStatus('success', 'Your message has been sent successfully! I\'ll get back to you soon.');
+            form.reset();
+            form.classList.remove('was-validated');
+          })
+          .catch(function (err) {
+            console.error('EmailJS error:', err);
+            setLoading(false);
+            setStatus('error', 'Something went wrong and your message wasn\'t sent. Please try again or email me directly.');
+          });
+      });
+    })();
+  </script>
 </body>
 
 </html>

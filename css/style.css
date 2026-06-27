@@ -628,3 +628,36 @@ a{text-decoration:none;color:inherit;}
 @media (prefers-reduced-motion: reduce){
   *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;}
 }
+
+/* ===================================================
+   CONTACT FORM — STATUS ALERT & SEND BUTTON
+   =================================================== */
+.form-status{
+  max-height:0;opacity:0;overflow:hidden;margin-top:0;
+  border-radius:var(--radius-sm);font-size:.92rem;font-weight:500;
+  transition:max-height .4s ease,opacity .4s ease,margin-top .4s ease,padding .4s ease;
+}
+.form-status.show{
+  max-height:200px;opacity:1;margin-top:22px;padding:14px 18px;
+}
+.form-status-success{
+  background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.35);color:#86EFAC;
+}
+.form-status-error{
+  background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.35);color:#FCA5A5;
+}
+
+.btn-send{
+  border:none;cursor:pointer;min-width:200px;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.btn-send:disabled{opacity:.75;cursor:not-allowed;transform:none!important;}
+
+.form-premium .form-control.is-invalid,
+.form-premium .was-validated .form-control:invalid{
+  border-color:#EF4444;
+}
+.form-premium .form-control.is-invalid:focus,
+.form-premium .was-validated .form-control:invalid:focus{
+  box-shadow:0 0 0 4px rgba(239,68,68,.15);
+}
