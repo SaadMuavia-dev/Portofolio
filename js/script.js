@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(6,182,212,${p.o})`;
+        ctx.fillStyle = `rgba(94,234,212,${p.o})`;
         ctx.fill();
       });
       // connecting lines
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < 120) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(59,130,246,${0.12 * (1 - dist / 120)})`;
+            ctx.strokeStyle = `rgba(56,189,248,${0.12 * (1 - dist / 120)})`;
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
