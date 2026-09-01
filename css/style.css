@@ -3,11 +3,11 @@
    =================================================== */
 
 :root{
-  --navy:#334155;
+  --navy:#3e6aa6;
   --navy-soft:#F1F5F9;
   --blue:#38BDF8;
   --cyan:#5EEAD4;
-  --white:#334155;
+  --white:#2f496d;
   --gray:#64748B;
   --accent:#FDA4AF;
   --gradient-primary:linear-gradient(135deg,var(--blue) 0%,#A78BFA 100%);
